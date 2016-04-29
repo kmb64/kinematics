@@ -20,7 +20,9 @@ $kinematics-border : 3px solid $kinematics-blue;
   font-family: "Alternate Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:40px;
   width : 120px;
-  > span {
+  > a#kinematics-link {
+    color : #333333;
+    text-decoration: none;
     border-bottom : $kinematics-border;
     padding-bottom : 4px;
   }
@@ -98,9 +100,11 @@ body {
 
 /* Custom page footer */
 .footer {
+  margin-top : 40px;
+  border-top : $kinematics-border;
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  //border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -122,7 +126,7 @@ body {
 
 /* Supporting marketing content */
 .marketing {
-  padding-bottom : 60px;
+  padding-bottom : 40px;
   border-bottom: 1px solid #e5e5e5;
   margin: 40px 0;
   p + h4 {
@@ -131,10 +135,10 @@ body {
 }
 
 .profile {
-  padding-bottom : 60px;
+  padding-bottom : 40px;
   border-bottom: 1px solid #e5e5e5;
   text-align: center;
-  margin: 40px 0;
+  margin: 20px 0;
 
   h2 {
     margin-top : 0;
