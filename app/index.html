@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
@@ -183,7 +183,7 @@
         </div>
 
         <div class="col-lg-3">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6054184756263!2d144.98726631535843!3d-37.79928597975499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6431c17ee0493%3A0x372c173f822e4843!2s132+Johnston+St%2C+Collingwood+VIC+3066!5e0!3m2!1sen!2sau!4v1463134268087" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div id="map1-collingwood"></div>
         </div>
 
         <div class="col-lg-3">
@@ -193,13 +193,8 @@
         </div>
 
         <div class="col-lg-3">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.217371986931!2d145.02735376535873!3d-37.80837717975324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad643c85d03446b%3A0x79a7fc983f507dd0!2sWorkshop+3101!5e0!3m2!1sen!2sau!4v1463134331975" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div id="map2-kew"></div>
         </div>
-
-      </div>
-
-      <div class="locations row">
-
 
       </div>
 
@@ -241,6 +236,69 @@
         }
       });
     </script>
+
+    <script>
+
+      function initMap() {
+
+        // Specify features and elements to define styles.
+        var styleArray = [
+          {
+            featureType: "all",
+            stylers: [
+              { saturation: -80 }
+            ]
+          },{
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              { hue: "#1D9AD3" },
+              { saturation: 50 }
+            ]
+          },{
+            featureType: "poi.business",
+            elementType: "labels",
+            stylers: [
+              { visibility: "off" }
+            ]
+          }
+        ];
+
+        var map1LatLng = {lat: -37.799286, lng: 144.9872663};
+        var map2LatLng = {lat: -37.8083864, lng: 145.0274062};
+
+        // Create a map object and specify the DOM element for display.
+        var map1 = new google.maps.Map(document.getElementById('map1-collingwood'), {
+          center: map1LatLng,
+          scrollwheel: false,
+          // Apply the map style array to the map.
+          styles: styleArray,
+          zoom: 15
+        });
+
+        var map2 = new google.maps.Map(document.getElementById('map2-kew'), {
+          center: map2LatLng,
+          scrollwheel: false,
+          // Apply the map style array to the map.
+          styles: styleArray,
+          zoom: 15
+        });
+
+        var marker1 = new google.maps.Marker({
+          map: map1,
+          position: map1LatLng,
+          title: 'Kinematics'
+        });
+
+        var marker2 = new google.maps.Marker({
+          map: map2,
+          position: map2LatLng,
+          title: 'Kinematics'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ti0MvJZcSGZKn0f_1kyscrMgTNwQ2fs&callback=initMap" async defer></script>
 
   </body>
 </html>
