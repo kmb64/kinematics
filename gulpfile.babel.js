@@ -1,4 +1,3 @@
-// generated on 2016-04-13 using generator-webapp 2.0.0
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
@@ -7,6 +6,88 @@ import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+
+
+
+var source        = require('vinyl-source-stream');
+var browserify    = require('browserify');
+var babelify      = require('babelify');
+var ngAnnotate    = require('browserify-ngannotate');
+var merge         = require('merge-stream');
+var templateCache = require('gulp-angular-templatecache');
+
+// Where our files are located
+var jsFiles   = "app/js/**/*.js";
+var viewFiles = "app/js/**/*.html";
+
+var interceptErrors = function(error) {
+  var args = Array.prototype.slice.call(arguments);
+
+  // Send error to notification center with gulp-notify
+  $.notify.onError({
+    title: 'Compile Error',
+    message: '<%= error.message %>'
+  }).apply(this, args);
+
+  // Keep gulp from hanging on this task
+  this.emit('end');
+};
+
+gulp.task('appjs', ['browserify'], () =>{
+  return gulp.src("build/app.js")
+    .pipe($.uglify())
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('browserify', ['views'], function() {
+  return browserify('./app/js/app.js')
+    .transform(babelify, {presets: ["es2015"]})
+    .transform(ngAnnotate)
+    .bundle()
+    .on('error', interceptErrors)
+    //Pass desired output filename to vinyl-source-stream
+    .pipe(source('app.js'))
+    // Start piping stream to tasks!
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('views', function() {
+  return gulp.src(viewFiles)
+    .pipe(templateCache({
+      standalone: true
+    }))
+    .on('error', interceptErrors)
+    .pipe($.rename("app.templates.js"))
+    .pipe(gulp.dest('./app/js/config/'));
+});
+
+gulp.task('default', ['browserify'], function() {
+
+  browserSync.init(['./build/**/**.**'], {
+    server: "./build",
+    port: 4000,
+    notify: false,
+    ui: {
+      port: 4001
+    }
+  });
+
+  gulp.watch(viewFiles, ['views']);
+  gulp.watch(jsFiles, ['browserify']);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -90,12 +171,12 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'scripts', 'fonts', 'browserify'], () => {
   browserSync({
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['.tmp', 'app'],
+      baseDir: ['.tmp', 'app', 'dist'],
       routes: {
         '/bower_components': 'bower_components'
       }
@@ -108,6 +189,8 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch(viewFiles, ['views']);
+  gulp.watch(jsFiles, ['browserify']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -138,6 +221,8 @@ gulp.task('serve:test', ['scripts'], () => {
     }
   });
 
+  gulp.watch(viewFiles, ['views']);
+  gulp.watch(jsFiles, ['browserify']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('test/spec/**/*.js').on('change', reload);
   gulp.watch('test/spec/**/*.js', ['lint:test']);
@@ -159,7 +244,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'appjs'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
