@@ -9,27 +9,24 @@ import 'angular-ui-router';
 import './config/app.templates';
 // Import our app functionaity
 import './layout';
-import './components';
 import './home';
 import './about';
 import './team';
-import './article';
+import './testimonial';
+import './location';
 import './services';
-import './auth';
-
 
 // Create and bootstrap application
 const requires = [
   'ui.router',
   'templates',
   'app.layout',
-  'app.components',
   'app.home',
   'app.about',
   'app.team',
-  'app.article',
-  'app.services',
-  'app.auth'
+  'app.testimonial',
+  'app.location',
+  'app.services'
 ];
 
 // Mount on window for testing
