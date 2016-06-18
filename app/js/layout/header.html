@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="app.home">
+        <a class="navbar-brand" ui-sref="app.home" ng-hide="$ctrl.pageTitle === 'Home — Kinematics'">
           <img height="50" alt="Kinematics logo" src="images/logo.png">
         </a>
       </div>
@@ -21,11 +21,9 @@
             <ul class="dropdown-menu">
               <li><a ui-sref="app.about">About</a></li>
               <li><a ui-sref="app.team">Meet our Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="networks.html">Networks</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="additional-information.html">Services</a></li>
-              <li><a href="additional-information.html">Locations</a></li>
+              <li><a ui-sref="app.testimonial">Testimonials</a></li>
+              <li><a ui-sref="app.services">Services</a></li>
+              <li><a ui-sref="app.location">Contact</a></li>
             </ul>
           </li>
           <li><a href="https://kinematics-and-co.cliniko.com/bookings">Book appointment</a></li>

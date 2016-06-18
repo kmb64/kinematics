@@ -1,8 +1,15 @@
 class AppHeaderCtrl {
-  constructor(AppConstants) {
+  constructor(AppConstants, $rootScope) {
     'ngInject';
 
+    this.pageTitle = $rootScope.pageTitle;
+
+    $rootScope.$on('$stateChangeSuccess', () => {
+      this.pageTitle = $rootScope.pageTitle;
+    });
+
     this.appName = AppConstants.appName;
+
   }
 }
 
