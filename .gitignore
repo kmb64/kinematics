@@ -6,3 +6,6 @@ bower_components
 test/bower_components
 .idea
 app/js/config/app.templates.js
+_site
+.sass-cache
+.jekyll-metadata

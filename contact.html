@@ -1,0 +1,148 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="locations row">
+
+  <div class="col-lg-12">
+    <h1 class="page-heading">Locations</h1>
+  </div>
+
+  <div class="col-lg-6">
+    <address>
+      <h3>Collingwood</h3><br>
+      132 Johnston St<br>
+      VIC 3006<br>
+      (Next door to Bluebird cafe)<br><br>
+      <abbr title="Phone">P:</abbr> 03 9421 3661
+      <br>
+      <a href="https://kinematics-and-co.cliniko.com/bookings">Book online</a>
+    </address>
+  </div>
+
+  <div class="col-lg-6">
+    <div id="map1-collingwood"></div>
+  </div>
+
+</div>
+
+<div class="locations row">
+
+  <div class="col-lg-6">
+    <address>
+      <h3>Kew</h3><br>
+      7/3 Wellington St<br>
+      VIC 3101<br>
+      (Workshop 3101 Building)<br><br>
+      <abbr title="Phone">P:</abbr> 03 9421 3661
+      <br>
+      <a href="https://kinematics-and-co.cliniko.com/bookings">Book online</a>
+    </address>
+  </div>
+
+  <div class="col-lg-6">
+    <div id="map2-kew"></div>
+  </div>
+
+</div>
+
+<div class="locations row">
+
+  <div class="col-lg-6">
+    <address>
+      <h3>Richmond</h3><br>
+      4A/337A Lennox St<br>
+      VIC 3121<br>
+      (sharing waiting area with Spine Consultants)<br><br>
+      <abbr title="Phone">P:</abbr> 03 9421 3661
+      <br>
+      <a href="https://kinematics-and-co.cliniko.com/bookings">Book online</a>
+    </address>
+  </div>
+
+  <div class="col-lg-6">
+    <div id="map3-richmond"></div>
+  </div>
+
+</div>
+
+<script>
+
+  function initMap() {
+
+    // Specify features and elements to define styles.
+    var styleArray = [
+      {
+        featureType: "all",
+        stylers: [
+          { saturation: -80 }
+        ]
+      },{
+        featureType: "road.arterial",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#1D9AD3" },
+          { saturation: 50 }
+        ]
+      },{
+        featureType: "poi.business",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      }
+    ];
+
+    var map1LatLng = {lat: -37.799286, lng: 144.9872663};
+    var map2LatLng = {lat: -37.8083864, lng: 145.0274062};
+    var map3LatLng = {lat: -37.8249317, lng: 144.9936381};
+
+    // Create a map object and specify the DOM element for display.
+    var map1 = new google.maps.Map(document.getElementById('map1-collingwood'), {
+      center: map1LatLng,
+      scrollwheel: false,
+      // Apply the map style array to the map.
+      styles: styleArray,
+      zoom: 15
+    });
+
+    var map2 = new google.maps.Map(document.getElementById('map2-kew'), {
+      center: map2LatLng,
+      scrollwheel: false,
+      // Apply the map style array to the map.
+      styles: styleArray,
+      zoom: 15
+    });
+
+    var map3 = new google.maps.Map(document.getElementById('map3-richmond'), {
+      center: map3LatLng,
+      scrollwheel: false,
+      // Apply the map style array to the map.
+      styles: styleArray,
+      zoom: 15
+    });
+
+    var marker1 = new google.maps.Marker({
+      map: map1,
+      position: map1LatLng,
+      title: 'Kinematics'
+    });
+
+    var marker2 = new google.maps.Marker({
+      map: map2,
+      position: map2LatLng,
+      title: 'Kinematics'
+    });
+
+    var marker3 = new google.maps.Marker({
+      map: map3,
+      position: map3LatLng,
+      title: 'Kinematics'
+    });
+
+  }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ti0MvJZcSGZKn0f_1kyscrMgTNwQ2fs&callback=initMap" async defer></script>
