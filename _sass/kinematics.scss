@@ -1,7 +1,6 @@
-$icon-font-path: '../fonts/';
-$alterate-gothic-font: $icon-font-path + '/alternate-gothic-2.ttf';
-
 $kinematics-blue: #27267F;
+$kinematics-gray: #4e4e4e;
+$kinematics-light-blue: #bcc7e1;
 $kinematics-border : 3px solid $kinematics-blue;
 
 .kinematics a {
@@ -48,11 +47,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   }
 }
 
-@font-face {
-  font-family: "Alternate Gothic";
-  src: url($alterate-gothic-font);
-}
-
 .marketing {
   h2  {
     margin-top : 0;
@@ -84,7 +78,7 @@ $kinematics-border : 3px solid $kinematics-blue;
 }
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 // endbower
 
 .browserupgrade {
@@ -142,7 +136,7 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-  background-image : url(../images/running-men-bg.jpg);
+  background-image : url(../assets/images/running-men-bg.jpg);
   background-size: cover;
   color : white;
   .btn {
