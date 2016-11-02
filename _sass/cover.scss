@@ -7,6 +7,21 @@
   max-width: 100%;
 }
 
+.ribbon {
+  margin-top : 40px;
+  background-color : $kinematics-light-blue;
+  color : $kinematics-blue;
+  text-transform: uppercase;
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  > div {
+    text-align: center;
+  }
+}
+
 .cover-locations {
   margin : 40px 0 60px 0;
   > div {

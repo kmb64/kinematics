@@ -16,7 +16,7 @@
 title: Kinematics Health and Performance Clinic
 email: info@kinematics.com.au
 description: > # this means to ignore newlines until "baseurl:"
-  Kinematics Health and Performance Clinic
+  Kinematics Health and Performance Clinic provides a complete approach to the diagnosis, treatment and rehabilitation of muscular and skeletal issues.
 baseurl: "/kinematics" # the subpath of your site, e.g. /blog
 url: "http://www.kinematics.com.au/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
