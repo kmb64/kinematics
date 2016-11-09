@@ -10,6 +10,13 @@ $kinematics-border : 3px solid $kinematics-blue;
   }
 }
 
+.icon {
+  > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .page-heading {
   margin-bottom: 40px;
   margin-top: 0;
