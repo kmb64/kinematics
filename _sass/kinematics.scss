@@ -10,6 +10,16 @@ $kinematics-border : 3px solid $kinematics-blue;
   }
 }
 
+@media (min-width: 768px) {
+  .social-icons {
+    padding-right: 30px;
+  }
+}
+
+.icon-facebook {
+  padding-right : 8px;
+}
+
 .icon {
   > img {
     width: 25px;
