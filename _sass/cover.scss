@@ -18,13 +18,16 @@
   h2 {
     margin: 20px 0;
     white-space: nowrap;
+    width : 100%;
+    font-size : 16px;
+
+    @media (min-width: 768px) {
+      font-size : 30px;
+    }
   }
 
   > div {
-    text-align: left;
-    @media (min-width: 768px) {
-      text-align: center;
-    }
+    text-align: center;
   }
 }
 

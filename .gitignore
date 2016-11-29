@@ -9,4 +9,3 @@ app/js/config/app.templates.js
 _site
 .sass-cache
 .jekyll-metadata
-*.svg
