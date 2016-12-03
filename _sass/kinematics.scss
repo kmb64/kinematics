@@ -3,19 +3,6 @@ $kinematics-gray: #4e4e4e;
 $kinematics-light-blue: #bcc7e1;
 $kinematics-border : 3px solid $kinematics-blue;
 
-.header-icons {
-  display: inline-block;
-  position: absolute;
-  right: 70px;
-  top: 24px;
-}
-
-@media (min-width: 768px) {
-  .header-icons {
-    right : 426px;
-  }
-}
-
 .kinematics a {
   color : $kinematics-blue;
   &.btn {
@@ -23,43 +10,9 @@ $kinematics-border : 3px solid $kinematics-blue;
   }
 }
 
-@media (min-width: 768px) {
-  .social-icons {
-    padding-right: 30px;
-  }
-}
-
-.icon-facebook {
-  padding-right : 8px;
-}
-
-.icon {
-  > img {
-    width: 25px;
-    height: 25px;
-  }
-}
-
 .page-heading {
   margin-bottom: 40px;
   margin-top: 0;
-}
-
-.kinematics-nav.navbar-default {
-
-  margin-bottom : 30px;
-  border : 0;
-  background-color : white;
-
-  .navbar-toggle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .navbar-nav > li > a {
-    color : $kinematics-blue;
-  }
-
 }
 
 .services {
@@ -80,19 +33,6 @@ $kinematics-border : 3px solid $kinematics-blue;
 .marketing {
   h2  {
     margin-top : 0;
-  }
-}
-
-.logo {
-  text-align: center;
-  font-family: "Alternate Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:40px;
-  width : 120px;
-  > a#kinematics-link {
-    color : #333333;
-    text-decoration: none;
-    border-bottom : $kinematics-border;
-    padding-bottom : 4px;
   }
 }
 
@@ -120,29 +60,7 @@ $kinematics-border : 3px solid $kinematics-blue;
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
-}
-
-/* Custom page header */
-.header {
-  /* Make the masthead heading the same height as the navigation */
-
-  transition: all 0.5s ease;
-
-  .btn-primary {
-    float : right;
-    margin-left: 0;
-    background: $kinematics-blue;
-    border: 0;
-  }
-
-  .logo {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
 }
 
 /* Custom page footer */
@@ -236,26 +154,11 @@ body {
       margin-right: 0;
     }
 
-    &.sticky {
-      position: fixed;
-      background: rgba(255, 255, 255, 0.9);
-      top: 0;
-      z-index: 1;
-      border : 0;
-      border-radius: 0;
-    }
-
   }
 
   .profile {
     padding-top : 20px;
     text-align: left;
-  }
-
-  .logo {
-    text-align: left;
-    width : 180px;
-    font-size:50px;
   }
 
   /* Space out the masthead */

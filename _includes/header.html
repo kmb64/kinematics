@@ -1,6 +1,17 @@
 <div class="header">
+
+  <nav class="navbar-support">
+    <div class="social-icons">
+      {% include social-icons.html %}
+    </div>
+    <div class="cta-links">
+      {% include call-now.html %}
+      {% include book-online-button.html %}
+    </div>
+  </nav>
+
   <nav class=" kinematics-nav navbar navbar-default">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -12,25 +23,13 @@
           <img width="140" alt="Kinematics logo" src="{{ site.baseurl }}/assets/images/logo.png">
         </a>
       </div>
-      <div class="header-icons">
-        {% include social-icons.html %}
-      </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Menu <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              {% for my_page in site.pages %}
-              {% if my_page.title %}
-              <li><a class="page-link" href="{{ site.baseurl }}{{ my_page.url}}">{{ my_page.title | escape }}</a></li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-          <li>{% include call-now.html %}</li>
-          <li>{% include book-online-button.html %}</li>
+          {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <li><a class="page-link" href="{{ site.baseurl }}{{ my_page.url}}">{{ my_page.title | escape }}</a></li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div>

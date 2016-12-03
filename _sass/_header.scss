@@ -1,0 +1,65 @@
+.navbar-support {
+  width: 100%;
+  padding: 0;
+  background: $kinematics-blue;
+  position: relative;
+  text-align: right;
+  height: 45px;
+
+  div {
+    padding : 10px;
+  }
+}
+
+.social-icons {
+  color: white;
+  display: inline-block;
+  text-align: right;
+}
+
+.icon-facebook {
+  padding-right : 8px;
+}
+
+.icon {
+  > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.cta-links {
+  line-height: 25px;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  background: $kinematics-light-blue;
+  color : $kinematics-blue;
+
+  > a {
+    margin-right : 20px;
+  }
+
+  .call-now {
+    margin : 0 20px;
+  }
+}
+
+
+
+.kinematics-nav.navbar-default {
+
+  margin-bottom : 30px;
+  border : 0;
+  background-color : white;
+
+  .navbar-toggle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav > li > a {
+    color : $kinematics-blue;
+  }
+
+}
