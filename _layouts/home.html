@@ -1,25 +1,39 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="cover-img-wrap">
-  <a href="{{ site.baseurl }}/about">
-    <img class="cover-img" src="{{ site.baseurl }}/assets/images/kinematics.png"/>
-  </a>
-</div>
+{% include head.html %}
 
-<div class="ribbon row">
+<body class="kinematics cover-page">
 
-  <div class="container">
+{% include browser-upgrade.html %}
 
-    <div class="col-lg-12">
-      <h2>• Structure • Function • Performance</h2>
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    {% include header.html %}
+
+    <div class="cover-container">
+
+      <div class="inner cover">
+        <h1 class="cover-heading">Cover your page.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-default">Learn more</a>
+        </p>
+      </div>
+
     </div>
+
+    {% include footer.html %}
 
   </div>
 
-
-
 </div>
 
+{% include scripts.html %}
 
+</body>
+
+
+</html>

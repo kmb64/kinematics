@@ -58,11 +58,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-bottom: 20px;
-}
-
 /* Custom page footer */
 .footer {
   margin-top : 40px;
@@ -177,4 +172,12 @@ body {
 
 #map1-collingwood, #map2-kew, #map3-richmond {
   height : 200px;
+}
+
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }
