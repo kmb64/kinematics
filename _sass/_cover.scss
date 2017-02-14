@@ -68,6 +68,7 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+  color : #4e4e4e;
 }
 
 /*
@@ -82,11 +83,6 @@ body {
       position: fixed;
       top: 0;
     }
-    .footer {
-      position: fixed;
-      bottom: 0;
-    }
-
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -94,9 +90,14 @@ body {
   }
   /* Handle the widths */
   .header,
-  .footer,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+.cover-page {
+  .footer {
+    display : none;
   }
 }
 

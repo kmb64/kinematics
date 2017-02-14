@@ -19,7 +19,11 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{{ site.baseurl }}/">
+          {% if page.cover %}
+            <img width="140" alt="Kinematics logo" src="{{ site.baseurl }}/assets/images/logo-white.png">
+          {% else %}
           <img width="140" alt="Kinematics logo" src="{{ site.baseurl }}/assets/images/logo.png">
+          {% endif %}
         </a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">

@@ -64,7 +64,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   border-top : $kinematics-border;
   padding-top: 19px;
   color: #777;
-  //border-top: 1px solid #e5e5e5;
 }
 
 .content {
@@ -136,19 +135,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   .footer {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .kinematics-nav {
-
-    .navbar-nav > li > a {
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-
-    .navbar-right {
-      margin-right: 0;
-    }
-
   }
 
   .profile {
