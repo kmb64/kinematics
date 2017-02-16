@@ -81,6 +81,13 @@ $kinematics-border : 3px solid $kinematics-blue;
   background-image : url(../assets/images/running-men-bg.jpg);
   background-size: cover;
   color : white;
+
+  &.banner {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/images/banner-image.PNG');
+    background-size: cover;
+    text-align: left;
+  }
+
   .btn {
     font-size: 21px;
     padding: 14px 24px;
