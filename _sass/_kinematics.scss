@@ -37,9 +37,10 @@ $kinematics-border : 3px solid $kinematics-blue;
 }
 
 .btn-primary#book-now {
-  background-color: $kinematics-blue;
+  background-color: transparent;
   border-color: white;
   border-width: 2px;
+  color : white;
 
   &:hover, &:active, &:focus, &.focus, &.active {
     background-color: $kinematics-blue;
