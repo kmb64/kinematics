@@ -52,11 +52,14 @@
   background: $kinematics-light-blue;
   color : $kinematics-blue;
 
+  > a {
+    padding : 0 20px;
+  }
 }
 
 .kinematics-nav.navbar-default {
 
-  margin-bottom : 30px;
+  margin-bottom : 5px;
   border : 0;
   background-color : transparent;
 
