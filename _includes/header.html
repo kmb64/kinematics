@@ -20,7 +20,6 @@
         </button>
         <a class="navbar-brand" href="{{ site.baseurl }}/">
           {% if page.cover %}
-            <img width="140" alt="Kinematics logo" src="{{ site.baseurl }}/assets/images/logo-white.png">
           {% else %}
           <img width="140" alt="Kinematics logo" src="{{ site.baseurl }}/assets/images/logo.png">
           {% endif %}
@@ -34,6 +33,9 @@
           {% endif %}
           {% endfor %}
           <li>{% include call-now.html %}</li>
+          {% if page.cover %}
+          <li>{% include book-online-button.html %}</li>
+          {% endif %}
         </ul>
       </div>
     </div>
