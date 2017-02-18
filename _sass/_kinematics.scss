@@ -43,7 +43,7 @@ $kinematics-border : 3px solid $kinematics-blue;
   color : white;
 
   &:hover, &:active, &:focus, &.focus, &.active {
-    background-color: $kinematics-blue;
+    background-color: transparent;
     border-color: white;
   }
 }
