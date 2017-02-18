@@ -80,7 +80,7 @@ body {
   .cover-page {
 
     .header {
-      position: fixed;
+      position: absolute;
       top: 0;
     }
   }
@@ -97,7 +97,8 @@ body {
 
 .cover-page {
   .footer {
-    display : none;
+    border-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -105,4 +106,61 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+
+.ribbon {
+  background-color: $kinematics-light-blue;
+  color: $kinematics-blue;
+  text-transform: uppercase;
+
+  h2 {
+    margin: 20px 0;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  > div {
+    text-align: center;
+  }
+}
+
+.cover-panel {
+  padding : 0;
+}
+
+.panel-lead {
+  padding : 6%;
+  background-color: $kinematics-blue;
+}
+
+.lead {
+  margin : 20px 0;
+  text-align: center;
+  color : white;
+}
+
+@media (min-width: 768px) {
+
+  .cover-row {
+    display: table;
+  }
+
+  .cover-panel {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+.cover-img {
+  margin : 20px auto;
+  max-height: 200px;
 }
