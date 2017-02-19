@@ -146,18 +146,8 @@ body {
   color : white;
 }
 
-@media (min-width: 768px) {
-
-  .cover-row {
-    display: table;
-  }
-
-  .cover-panel {
-    float: none;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
+.cover-row {
+  background-color : $kinematics-blue;
 }
 
 .cover-img {
