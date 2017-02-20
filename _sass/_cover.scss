@@ -136,7 +136,7 @@ body {
 }
 
 .panel-lead {
-  padding : 6%;
+  padding: 6%;
   background-color: $kinematics-blue;
 }
 
@@ -147,6 +147,12 @@ body {
 }
 
 .cover-row {
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    align-items: center;
+  }
+  margin-top: 20px;
   background-color : $kinematics-blue;
 }
 

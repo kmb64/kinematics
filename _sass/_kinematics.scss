@@ -1,4 +1,4 @@
-$kinematics-blue: #27267F;
+$kinematics-blue: #27277D;
 $kinematics-gray: #4e4e4e;
 $kinematics-light-blue: #bcc7e1;
 $kinematics-border : 3px solid $kinematics-blue;
@@ -167,11 +167,24 @@ $kinematics-border : 3px solid $kinematics-blue;
 }
 
 //For the maps on contact page
-iframe {
+.map iframe {
   width : 100%;
 }
 
 .blue {
   background-color: $kinematics-blue;
   color : white;
+}
+
+.content-row {
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    align-items: center;
+  }
+  margin-top: 20px;
+}
+
+.table-center {
+  text-align: center;
 }
