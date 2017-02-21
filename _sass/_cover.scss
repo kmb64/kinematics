@@ -160,3 +160,8 @@ body {
   margin : 40px auto;
   max-height: 300px;
 }
+
+video {
+  background:transparent url('../assets/images/video-poster.png') no-repeat 0 0;
+  background-size:cover;
+}
