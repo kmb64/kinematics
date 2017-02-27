@@ -1,5 +1,5 @@
 $kinematics-blue: #27277D;
-$kinematics-gray: #4e4e4e;
+$kinematics-gray: #2e2e2e;
 $kinematics-light-blue: #bcc7e1;
 $kinematics-border : 3px solid $kinematics-blue;
 
@@ -56,14 +56,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-/* Custom page footer */
-.footer {
-  margin-top : 40px;
-  border-top : $kinematics-border;
-  padding-top: 19px;
-  color: #777;
 }
 
 .content {
@@ -139,10 +131,6 @@ $kinematics-border : 3px solid $kinematics-blue;
   /* Remove the padding we set earlier */
   .header,
   .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   .profile {
     padding-top : 20px;
@@ -156,14 +144,6 @@ $kinematics-border : 3px solid $kinematics-blue;
     border-bottom: 0;
     background-position-y: -60px;
   }
-}
-
-.footer {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
 }
 
 //For the maps on contact page
