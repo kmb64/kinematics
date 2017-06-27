@@ -5,6 +5,21 @@
   text-align: left;
   padding : 20px;
 
+  .footer-social-icons {
+    > li {
+      margin-bottom : 20px;
+    }
+    .icon {
+      padding-right: 4px;
+      > img {
+        margin : 0;
+      }
+      &.icon-facebook {
+        padding-right : 4px;
+      }
+    }
+  }
+
   img {
     margin-bottom : 20px;
     max-width: 330px;
